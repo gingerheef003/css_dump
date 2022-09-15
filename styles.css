@@ -13,3 +13,23 @@ body {
     box-shadow: inset 100px 0 0 0 #54b3d6;
     color: white;
 }
+
+#link2 {
+    text-decoration: none;
+    position: relative;
+}
+#link2::before {
+    content: '';
+    background-color: hsla(196, 61%, 58%, .75);
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+#link2:hover::before {
+    bottom: 0;
+    height: 100%;
+}
