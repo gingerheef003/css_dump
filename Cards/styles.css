@@ -37,6 +37,7 @@ body {
     color: #ffffda;
     padding: 1.5rem;
     background-color: #202022;
+    border-radius: 3px;
     pointer-events: auto;
     transform: scale(1);
     opacity: 1;
@@ -87,4 +88,23 @@ body {
 }
 .cards:hover > .card:not(:hover) {
     opacity: 0.5;
+}
+
+.shadow-layer-card {
+    width: 200px;
+    height: 250px;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+    transform: rotate(20deg) skew(-10deg, -5deg);
+    transition: box-shadow .25s ease-in;
+}
+.shadow-layer-card:hover {
+    box-shadow: 
+    rgba(255, 255, 255, 0.5) 5px 3px,
+    rgba(255, 255, 255, 0.4) 10px 6px,
+    rgba(255, 255, 255, 0.3) 15px 9px;
 }
