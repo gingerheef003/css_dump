@@ -1,5 +1,7 @@
 body {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -91,4 +93,34 @@ a {
 #link4:hover::before {
     transform-origin: left;
     transform: scaleX(1);
+}
+
+#skew {
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    color: #54b3d6;
+    outline: 2px solid #54b3d6;
+    padding: 5px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+}
+#skew:hover {
+    color: #fff;
+}
+#skew::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px;    /* Custom value specific to case */
+    width: 0;
+    height: 100%;
+    background-color: #54b3d6;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+#skew:hover::before {
+    width: 150%;
 }
